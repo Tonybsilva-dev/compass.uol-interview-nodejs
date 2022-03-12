@@ -19,3 +19,13 @@ model Users {
 
   @@map("users")
 }
+
+model City {
+  id         String   @id @default(uuid())
+  city       String
+  uf         String
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+
+  @@map("city")
+}
