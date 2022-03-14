@@ -7,7 +7,9 @@
   "author": "Antonio Bernardino da Silva <tonybsilvadev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd --exit-child --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts"
+    "generate": "yarn run prisma generate",
+    "dev": "tsnd --exit-child --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+    "start": "yarn generate && yarn dev"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
